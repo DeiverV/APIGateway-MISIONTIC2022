@@ -84,25 +84,25 @@ const equipTypeDefs = gql `
     }
 
     type UsuariosGet{
-        eqid: String!
+        eqid: String
 
-        user1: String!
-        passw1: String!
-        userName1 : String!
-        asigndata1 : String!
-        usertype1 : String!
+        user1: String
+        passw1: String
+        userName1 : String
+        asigndata1 : String
+        usertype1 : String
 
-        user2: String!
-        passw2: String!
-        userName2 : String!
-        asigndata2 : String!
-        usertype2 : String!
+        user2: String
+        passw2: String
+        userName2 : String
+        asigndata2 : String
+        usertype2 : String
 
-        user3: String!
-        passw3: String!
-        userName3 : String!
-        asigndata3 : String!
-        usertype3 : String!
+        user3: String
+        passw3: String
+        userName3 : String
+        asigndata3 : String
+        usertype3 : String
     }
 
     type SoftwareGet{
@@ -124,34 +124,34 @@ const equipTypeDefs = gql `
     }
 
     type RegisterGet{
-        eqid : String!
+        eqid : String
 
-        eqtype : String!
-        model :String!
-        numSeries :String!
-        numProd :String!
-        procMarc :String!
-        procModel :String!
-        procVel :String!
-        ram :String!
-        discoType :String!
-        discoCapacity :String!
-        tGraphicalInd :Boolean!
-        tGraphicMarc :String!
-        screenSize :Int!
-        USB :Boolean!
-        HDMI :Boolean!
-        sAudio :Boolean!
-        eAudio :Boolean!
-        bluetooth :Boolean!
-        wifi :Boolean!
-        ethernet :Boolean!
-        webcam :Boolean!
-        mouse :Boolean!
-        keyboard :Boolean!
-        unityCD : Boolean!
-        other :String!
-        lastChange :String!
+        eqtype : String
+        model :String
+        numSeries :String
+        numProd :String
+        procMarc :String
+        procModel :String
+        procVel :String
+        ram :String
+        discoType :String
+        discoCapacity :String
+        tGraphicalInd :Boolean
+        tGraphicMarc :String
+        screenSize :Int
+        USB :Boolean
+        HDMI :Boolean
+        sAudio :Boolean
+        eAudio :Boolean
+        bluetooth :Boolean
+        wifi :Boolean
+        ethernet :Boolean
+        webcam :Boolean
+        mouse :Boolean
+        keyboard :Boolean
+        unityCD : Boolean
+        other :String
+        lastChange :String
     }
 
     type ContabilidadGet{
@@ -172,10 +172,10 @@ const equipTypeDefs = gql `
     }
 
     type Mutation{
-        newRegister(registerInput: Register!)
-        newUsuario(usuarioInput: Usuario!)
-        newContabilidad(contabilidadInput: Contabilidad!)
-        newSoftware(softwareInput: Software!)
+        newRegister(registerInput: Register!):String!
+        newUsuario(usuarioInput: Usuarios!):String!
+        newContabilidad(contabilidadInput: Contabilidad!):String!
+        newSoftware(softwareInput: Software!):String!
     }
 
 
