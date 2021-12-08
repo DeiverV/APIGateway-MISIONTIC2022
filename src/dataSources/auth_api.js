@@ -23,9 +23,9 @@ class AuthAPI extends RESTDataSource {
         return await this.post('/login/',credentials);
     }
 
-    async refreshToken(token) {
-        token = new Object(JSON.parse(JSON.stringify({ refresh: token} )));
-        return await this.post('/refresh/',token);
+    async refreshToken(refresh) {
+        refresh = new Object(JSON.parse(JSON.stringify({ refresh: refresh} )));
+        return await this.post('/refresh/',refresh);
     }
 
 };

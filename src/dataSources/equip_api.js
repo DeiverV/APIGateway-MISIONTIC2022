@@ -9,36 +9,36 @@ class EquipAPI extends RESTDataSource{
         this.baseURL = serverConfig.equipos_api_url;
     }
 
-    async createRegister(register) {
-        register = new Object(JSON.parse(JSON.stringify(register)));
-        return await this.post('/register', register);
+    async createRegister(registerInput) {
+        register = new Object(JSON.parse(JSON.stringify(registerInput)));
+        return await this.post('/register', registerInput);
     }
 
     async getRegister(eqid){
         return await this.get(`/register/${eqid}`);
     }
 
-    async createUsuario(usuario) {
-        usuario = new Object(JSON.parse(JSON.stringify(usuario)));
-        return await this.post('/usuarios', usuario);
+    async createUsuario(usuarioInput) {
+        usuarioInput = new Object(JSON.parse(JSON.stringify(usuarioInput)));
+        return await this.post('/usuarios', usuarioInput);
     }
 
     async getUsuario(eqid){
         return await this.get(`/usuarios/${eqid}`);
     }
 
-    async createContabilidad(contabilidad) {
-        contabilidad = new Object(JSON.parse(JSON.stringify(contabilidad)));
-        return await this.post('/contabilidad', contabilidad);
+    async createContabilidad(contabilidadInput) {
+        contabilidadInput = new Object(JSON.parse(JSON.stringify(contabilidadInput)));
+        return await this.post('/contabilidad', contabilidadInput);
     }
 
     async getContabilidad(eqid){
         return await this.get(`/contabilidad/${eqid}`);
     }
 
-    async createSoftware(software) {
-        software = new Object(JSON.parse(JSON.stringify(software)));
-        return await this.post('/software', software);
+    async createSoftware(softwareInput) {
+        softwareInput = new Object(JSON.parse(JSON.stringify(softwareInput)));
+        return await this.post('/software', softwareInput);
     }
 
     async getSoftware(eqid){

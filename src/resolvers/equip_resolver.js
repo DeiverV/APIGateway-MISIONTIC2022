@@ -46,7 +46,7 @@ const equipResolver = {
 
             if(userIdToken){
 
-                const registerInput = {
+                const registerInputt = {
                     eqid : registerInput.eqid,
                     eqtype : registerInput.eqtype,
                     model : registerInput.model,
@@ -75,7 +75,7 @@ const equipResolver = {
                     other : registerInput.other,
                     lastChange : registerInput.lastChange,
                 }
-                return await dataSources.equipAPI.createRegister(registerInput);
+                return await dataSources.equipAPI.createRegister(registerInputt);
 
             }else{
                 throw console.error("Usuario no autorizado");
@@ -87,7 +87,7 @@ const equipResolver = {
 
             if(userIdToken){
 
-                const usuarioInput = {
+                const usuarioInputt = {
                     eqid : usuarioInput.eqid,
                     user1 :  usuarioInput.user1,
                     passw1 :  usuarioInput.passw1,
@@ -107,7 +107,7 @@ const equipResolver = {
                     asigndata3 : usuarioInput.asigndata3,
                     usertype3 : usuarioInput.usertype3,
                 }
-                return await dataSources.equipAPI.createUsuario(usuarioInput);
+                return await dataSources.equipAPI.createUsuario(usuarioInputt);
 
             }else{
                 throw console.error("Usuario no autorizado");
@@ -119,7 +119,7 @@ const equipResolver = {
 
             if(userIdToken){
 
-                const contabilidadInput = {
+                const contabilidadInputt = {
                     eqid : contabilidadInput.eqid,
                     invoice : contabilidadInput.invoice,
                     dateinvoice : contabilidadInput.dateinvoice,
@@ -129,7 +129,7 @@ const equipResolver = {
                     warranty : contabilidadInput,warranty,
   
                 }
-                return await dataSources.equipAPI.createContabilidad(contabilidadInput);
+                return await dataSources.equipAPI.createContabilidad(contabilidadInputt);
 
             }else{
                 throw console.error("Usuario no autorizado");
@@ -141,7 +141,7 @@ const equipResolver = {
 
             if(userIdToken){
 
-                const softwareInput = {
+                const softwareInputt = {
                     eqid : softwareInput.eqid,
                     Edition : softwareInput.Edition,
                     Typesystem : softwareInput.Typesystem,
@@ -158,7 +158,7 @@ const equipResolver = {
                     notes : softwareInput.notes,
 
                 }
-                return await dataSources.equipAPI.createSofware(softwareInput);
+                return await dataSources.equipAPI.createSofware(softwareInputt);
 
             }else{
                 throw console.error("Usuario no autorizado");
