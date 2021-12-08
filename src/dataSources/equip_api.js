@@ -10,7 +10,7 @@ class EquipAPI extends RESTDataSource{
     }
 
     async createRegister(registerInput) {
-        register = new Object(JSON.parse(JSON.stringify(registerInput)));
+        registerInput = new Object(JSON.parse(JSON.stringify(registerInput)));
         return await this.post('/register', registerInput);
     }
 

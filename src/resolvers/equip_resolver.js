@@ -2,37 +2,35 @@ const equipResolver = {
 
     Query: {
 
-        getRegisterById: (_, { eqId }, { dataSources , userIdToken }) => {
-
+        getRegisterById: (_, { eqid }, { dataSources , userIdToken }) => {
             if(userIdToken){
-                return dataSources.equipAPI.getRegister(eqId)
-            }else{
-                return null;
-            }
-
-        },
-
-        getUserById: (_, { eqId }, { dataSources , userIdToken }) =>{
-            if(userIdToken){
-                return dataSources.equipAPI.getUsuario(eqId);
+                return dataSources.equipAPI.getRegister(eqid);
             }else{
                 return null;
             }
         },
 
-        getContabilidadById: (_, { eqId }, { dataSources , userIdToken }) =>{
-
+        getUserById: (_, { eqid }, { dataSources , userIdToken }) =>{
             if(userIdToken){
-                return dataSources.equipAPI.getContabilidad(eqId);
+                return dataSources.equipAPI.getUsuario(eqid);
             }else{
                 return null;
             }
         },
 
-        getSoftwareById: (_, { eqId }, { dataSources , userIdToken }) =>{
+        getContabilidadById: (_, { eqid }, { dataSources , userIdToken }) =>{
 
             if(userIdToken){
-                return dataSources.equipAPI.getSoftware(eqId);
+                return dataSources.equipAPI.getContabilidad(eqid);
+            }else{
+                return null;
+            }
+        },
+
+        getSoftwareById: (_, { eqid }, { dataSources , userIdToken }) =>{
+
+            if(userIdToken){
+                return dataSources.equipAPI.getSoftware(eqid);
             }else{
                 return null;
             }
@@ -169,3 +167,5 @@ const equipResolver = {
     }
 
 }
+
+module.exports = equipResolver;
