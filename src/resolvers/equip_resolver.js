@@ -124,7 +124,7 @@ const equipResolver = {
                     pricenet : contabilidadInput.pricenet,
                     iva : contabilidadInput.iva,
                     shopplace : contabilidadInput.shopplace,
-                    warranty : contabilidadInput,warranty,
+                    warranty : contabilidadInput.warranty,
   
                 }
                 return await dataSources.equipAPI.createContabilidad(contabilidadInputt);
